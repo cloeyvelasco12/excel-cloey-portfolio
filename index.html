@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Excel Cloey O. Velasco, ECT — AI engineering, application development, and workflow automation prototypes.">
+  <title>Excel Cloey O. Velasco, ECT | AI Engineer Portfolio</title>
+  <style>
+    :root{--ink:#172033;--muted:#5c667b;--line:#e4e9f1;--paper:#fff;--wash:#f5f8fc;--blue:#2458d3;--blue2:#eaf0ff;--teal:#0f8b8d;--radius:20px;--shadow:0 12px 35px rgba(26,45,82,.07)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+    a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:3px solid #82a8ff;outline-offset:3px}
+    .container{width:min(1120px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:5}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:20px}.brand{font-weight:800;letter-spacing:-.04em}.brand span{color:var(--blue)}.nav-links{display:flex;gap:24px;font-size:.94rem;color:var(--muted)}.nav-links a:hover{color:var(--blue)}
+    .hero{padding:94px 0 78px;background:radial-gradient(ellipse at 80% 5%,#e9f0ff 0,transparent 35%),linear-gradient(180deg,#fbfcff,#fff)}
+    .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--blue);font-weight:750;font-size:.84rem;text-transform:uppercase;letter-spacing:.11em}.dot{width:8px;height:8px;border-radius:50%;background:#2fa47c;display:inline-block}
+    h1{font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.03;letter-spacing:-.065em;margin:20px 0}.gradient{color:var(--blue)}.lead{font-size:1.15rem;color:var(--muted);max-width:690px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:750;border:1px solid var(--line);background:#fff;cursor:pointer}.btn.primary{background:var(--blue);color:white;border-color:var(--blue)}.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}.hero-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:var(--shadow)}.avatar{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--blue2);color:var(--blue);font-size:1.3rem;font-weight:850}.hero-card h2{font-size:1.12rem;margin:18px 0 4px}.hero-card p{margin:0;color:var(--muted);font-size:.95rem}.status{display:inline-flex;margin-top:20px;background:#eaf8f1;color:#176c4b;padding:6px 10px;border-radius:99px;font-size:.8rem;font-weight:750}
+    section{padding:78px 0}.section-alt{background:var(--wash)}.section-head{max-width:700px;margin-bottom:32px}.kicker{font-size:.78rem;color:var(--blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em;line-height:1.15;margin:8px 0 12px}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:var(--radius);background:white;padding:24px;box-shadow:0 5px 18px rgba(26,45,82,.025)}.card-icon{width:44px;height:44px;border-radius:13px;background:var(--blue2);display:grid;place-items:center;color:var(--blue);font-weight:900;font-size:1.2rem}.card h3{margin:16px 0 8px;font-size:1.15rem;letter-spacing:-.025em}.card p{margin:0;color:var(--muted);font-size:.94rem}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}.tag{background:#f0f3f8;color:#46536a;padding:5px 9px;border-radius:7px;font-size:.76rem;font-weight:700}.label{display:inline-block;background:#fff4df;color:#885700;border:1px solid #f3dfb8;border-radius:8px;padding:5px 8px;font-size:.75rem;font-weight:800}.project-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;font-weight:750;font-size:.88rem;color:var(--blue)}.project-links a:hover{text-decoration:underline}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}.skill-list{display:flex;flex-wrap:wrap;gap:10px}.skill{border:1px solid var(--line);border-radius:11px;padding:9px 12px;background:white;font-size:.91rem;font-weight:650}.note{border-left:4px solid var(--teal);background:#eefafa;padding:18px 20px;border-radius:0 14px 14px 0;color:#27555a}.steps{list-style:none;padding:0;margin:0;counter-reset:step}.steps li{position:relative;padding:0 0 24px 48px;color:var(--muted)}.steps li:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:10px;background:var(--blue2);color:var(--blue);font-weight:800;display:grid;place-items:center}.steps strong{display:block;color:var(--ink)}
+    .contact-box{background:#18243b;color:white;border-radius:24px;padding:clamp(26px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:28px}.contact-box p{color:#c5cddd;max-width:620px}.contact-box .btn{white-space:nowrap}.footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.87rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.small{font-size:.86rem;color:var(--muted)}.placeholder{border-bottom:1px dashed currentColor}
+    @media(max-width:850px){.hero-grid,.two-col{grid-template-columns:1fr}.hero{padding-top:65px}.grid{grid-template-columns:repeat(2,1fr)}.hero-card{max-width:520px}.nav-links{gap:12px}.nav-links a:nth-child(2){display:none}}
+    @media(max-width:580px){.container{width:min(100% - 28px,1120px)}.nav-inner{min-height:64px}.nav-links{font-size:.82rem;gap:10px}.brand{font-size:.9rem}.grid{grid-template-columns:1fr}section{padding:58px 0}.contact-box{align-items:flex-start;flex-direction:column}.hero{padding:54px 0}}
+  </style>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">ECV<span>.</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#process">Approach</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> AI • Applications • Automation</div>
+        <h1>Building practical solutions with <span class="gradient">AI and software.</span></h1>
+        <p class="lead">I'm <strong>Excel Cloey O. Velasco, ECT</strong> — an aspiring AI Engineer focused on exploring intelligent applications, useful automation, and user-centered digital tools.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore portfolio</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+        <p class="small" style="margin-top:18px">Portfolio projects are independent demos and prototypes, not client engagements.</p>
+      </div>
+      <aside class="hero-card">
+        <div class="avatar" aria-hidden="true">ECV</div>
+        <h2>Excel Cloey O. Velasco, ECT</h2>
+        <p>Aspiring AI Engineer · Application & Systems Development</p>
+        <span class="status">Open to learning and opportunities</span>
+        <div style="border-top:1px solid var(--line);margin-top:22px;padding-top:18px">
+          <p><strong style="color:var(--ink)">Current focus</strong><br>AI integration · workflow design · practical prototypes</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head"><div class="kicker">About me</div><h2>Curious by nature. Practical by design.</h2><p>I’m building my technical portfolio around real-world problems that can be addressed with software, automation, and AI-assisted workflows.</p></div>
+      <div class="two-col">
+        <div>
+          <p>I enjoy learning how technology can reduce repetitive work, organize information, and make digital experiences more useful. My goal is to develop reliable solutions that are understandable, maintainable, and grounded in user needs.</p>
+          <p>I am at the beginning of my professional AI engineering journey, so this site clearly distinguishes portfolio prototypes from paid or client work. I value honest documentation, thoughtful testing, and continuous improvement.</p>
+        </div>
+        <div class="note"><strong>What I aim to bring</strong><br>Curiosity, structured problem-solving, clear documentation, attention to detail, and a willingness to learn new tools to meet project requirements.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" id="skills">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Skills & tools</div><h2>A growing technical toolkit.</h2><p>Keep only the skills you can confidently discuss or demonstrate. Add proficiency levels as you gain hands-on experience.</p></div>
+      <div class="two-col">
+        <div class="card"><h3>Areas of interest</h3><div class="skill-list"><span class="skill">AI-powered applications</span><span class="skill">LLM integration</span><span class="skill">Workflow automation</span><span class="skill">API integration</span><span class="skill">Application development</span><span class="skill">Data dashboards</span><span class="skill">Technical documentation</span><span class="skill">Prompt design</span></div></div>
+        <div class="card"><h3>Tools to document as you use them</h3><div class="skill-list"><span class="skill">Python</span><span class="skill">Git & GitHub</span><span class="skill">REST APIs</span><span class="skill">Streamlit</span><span class="skill">JavaScript</span><span class="skill">Google Sheets</span><span class="skill">Zapier</span><span class="skill">Make.com</span><span class="skill">ChatGPT / LLM APIs</span></div><p class="small" style="margin-top:14px">These are suggested technologies for future projects, not a claim that every tool is already mastered.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Selected work</div><h2>Portfolio demos & prototypes.</h2><p>These project concepts are ready to build. Replace each status and link after you have implemented and tested the project. Do not present a concept as a working product until it is built.</p></div>
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">✳</div><span class="label">Planned prototype</span>
+          <h3>AI FAQ Support Assistant</h3>
+          <p>A small customer-support assistant that answers common questions from an approved FAQ and directs uncertain or sensitive requests to a human.</p>
+          <div class="tags"><span class="tag">LLM / API</span><span class="tag">Knowledge base</span><span class="tag">Evaluation</span></div>
+          <p><strong>Build goals</strong></p><p>Load a sample FAQ, generate grounded responses, add an escalation rule, and test at least 10 representative questions.</p>
+          <div class="project-links"><a href="#project-docs">Read project brief ↓</a><a href="https://github.com/" target="_blank" rel="noreferrer">Add repository ↗</a></div>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">↗</div><span class="label">Planned prototype</span>
+          <h3>Lead Capture Automation</h3>
+          <p>A workflow concept that collects inquiries, logs them in a spreadsheet, and drafts a confirmation message for review.</p>
+          <div class="tags"><span class="tag">Make / Zapier</span><span class="tag">Google Sheets</span><span class="tag">Automation</span></div>
+          <p><strong>Build goals</strong></p><p>Connect a form to a lead tracker, validate required fields, and test duplicate and incomplete submissions.</p>
+          <div class="project-links"><a href="#project-docs">Read project brief ↓</a><a href="https://github.com/" target="_blank" rel="noreferrer">Add repository ↗</a></div>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">▦</div><span class="label">Planned prototype</span>
+          <h3>Business Operations Dashboard</h3>
+          <p>A dashboard concept for reviewing fictional order volume, task status, and customer inquiry trends in one place.</p>
+          <div class="tags"><span class="tag">Python / Streamlit</span><span class="tag">Charts</span><span class="tag">Sample data</span></div>
+          <p><strong>Build goals</strong></p><p>Use clearly labeled synthetic data, add filters and summary metrics, and document setup instructions.</p>
+          <div class="project-links"><a href="#project-docs">Read project brief ↓</a><a href="https://github.com/" target="_blank" rel="noreferrer">Add repository ↗</a></div>
+        </article>
+      </div>
+      <p class="small" style="margin-top:18px">Note: The GitHub links above are generic placeholders. Replace them with your actual repositories or remove them until your projects are published.</p>
+    </div>
+  </section>
+
+  <section class="section-alt" id="project-docs">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Project documentation</div><h2>How each project should be presented.</h2><p>Use these concise briefs as a build checklist and as the starting point for a README file.</p></div>
+      <div class="grid">
+        <article class="card"><h3>01 · AI FAQ Assistant</h3><p><strong>Problem:</strong> Repetitive questions consume time and answers must remain consistent.</p><p style="margin-top:10px"><strong>Prototype:</strong> FAQ-grounded responses, refusal/escalation behavior, and a test set.</p><p style="margin-top:10px"><strong>Acceptance checks:</strong> Answers are supported by the FAQ; unsupported questions are escalated; no real customer data is used.</p><p style="margin-top:10px"><strong>Evidence to add:</strong> UI screenshots, test table, architecture diagram, demo link, repository link.</p></article>
+        <article class="card"><h3>02 · Lead Automation</h3><p><strong>Problem:</strong> New inquiries can be missed when they are copied manually between tools.</p><p style="margin-top:10px"><strong>Prototype:</strong> Form submission → validation → lead tracker → confirmation draft.</p><p style="margin-top:10px"><strong>Acceptance checks:</strong> Required fields are checked; errors are visible; duplicate submissions are handled; messages are not sent without proper configuration.</p><p style="margin-top:10px"><strong>Evidence to add:</strong> Workflow diagram, test cases, redacted screenshots, setup notes, demo link.</p></article>
+        <article class="card"><h3>03 · Operations Dashboard</h3><p><strong>Problem:</strong> Business activity is spread across data tables and is hard to scan quickly.</p><p style="margin-top:10px"><strong>Prototype:</strong> Dashboard with sample orders, status filters, KPIs, and trend charts.</p><p style="margin-top:10px"><strong>Acceptance checks:</strong> Totals match the source data; filters behave correctly; charts have clear labels; synthetic data is disclosed.</p><p style="margin-top:10px"><strong>Evidence to add:</strong> Screenshots, sample dataset, feature list, setup instructions, repository/demo link.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Working approach</div><h2>From problem to tested prototype.</h2><p>A simple, repeatable process for building useful technical solutions.</p></div>
+      <ol class="steps">
+        <li><strong>Understand the use case</strong>Define the user, problem, constraints, and what success should look like.</li>
+        <li><strong>Design a small solution</strong>Choose the simplest suitable workflow, interface, data structure, and tools.</li>
+        <li><strong>Build and integrate</strong>Implement the core functionality and connect only the services needed.</li>
+        <li><strong>Test edge cases</strong>Check errors, missing information, unexpected inputs, privacy, and fallback behavior.</li>
+        <li><strong>Document and improve</strong>Provide setup instructions, limitations, screenshots, and next steps.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-alt" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div><div class="kicker" style="color:#a9c1ff">Get in touch</div><h2 style="font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-.05em;margin:8px 0">Let's build something useful.</h2><p>I’m open to discussing junior opportunities, freelance projects, collaborations, and practical ways to apply AI and automation.</p><p style="margin-bottom:0">Email: <span class="placeholder">velascoexcelcloey@gmail.com</span><br>GitHub: <span class="placeholder">https://github.com/cloeyvelasco12</span><br>LinkedIn: <span class="placeholder">linkedin.com/in/excel-cloey-velasco-055348360
+
+</span></p></div>
+        <a class="btn primary" href="mailto:velascoexcelcloey@gmail.com">Email me</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Excel Cloey O. Velasco, ECT</span><span>Independent portfolio demos · Built to learn and improve</span></div></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
